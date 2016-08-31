@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
 
   def length_checker
     if @plain_text && @plain_text.length < 8
-      errors.add(password: "must be longer than 8 characters")
+      errors.add(:password, "must be longer than 8 characters")
     end
   end
 
