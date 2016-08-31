@@ -1,0 +1,8 @@
+<h1><%=@question.title %> - <%=@question.user.username %> </h1>
+
+<h2>Fill out form below to submit answer.</h2>
+
+<form action="/questions/<%=@question.id%>/answers" method="post">
+  Answer: <input type="text" name="content"><br>
+  <input type="submit" value="Submit">
+</form>
