@@ -40,7 +40,7 @@ a:visited {
 }
 
 a:hover {
-    color: #000;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -71,6 +71,7 @@ code {
     box-shadow: 0 10px 0 #404040;
 }
 .head-links a {
+    color: #ffffff;
     font-family: Geneva;
     text-align: center;
     margin-left: 50px;
