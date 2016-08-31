@@ -1,0 +1,12 @@
+<% @category.questions.each do |question| %>
+<a href= "/categories/<%= @category.id%>/question/<%= question.id %>">question.title</a>
+<% end %>
+
+<form action="categories/:id" action="post" id="questform">
+  Title: <input type="text" name="question[title]">
+  <input type="submit">
+</form>
+<br>
+<textarea rows="4" cols="50" name="question[content]" form="usrform">
+Enter question here...</textarea>
+
