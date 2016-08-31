@@ -14,3 +14,11 @@ Category.create(name: "MAC Makeup")
 Category.create(name: "Mack Trucks")
 Category.create(name: "Big Mac")
 
+30.times do
+Question.create(content:Faker::Lorem.sentence, title:Faker::Lorem.sentence, user_id: rand(1..9), category_id:rand(1..9))
+end
+
+50.times do
+Answer.create(content:Faker::Lorem.sentence, user_id: rand(1..9), question_id:rand(1..29))
+end
+

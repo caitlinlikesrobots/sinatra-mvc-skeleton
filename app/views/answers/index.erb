@@ -1,0 +1,13 @@
+<h1><%=@question.title %> - <%=@question.user.username %> </h1>
+<h2><%=@question.content %></h2>
+
+<h3> Answers </h3>
+<% @answers.each do |answer|%>
+
+<ul>
+<li><%= answer.content %> </li>
+<li><%= User.find(answer.user_id).username %></li>
+</ul>
+
+<% end%>
+<a href="/questions/<%=@question.id%>/answers/new"> Submit an answer </a>

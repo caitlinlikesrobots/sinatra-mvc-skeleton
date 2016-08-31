@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  belongs_to :question
+  has_many :question
 end
