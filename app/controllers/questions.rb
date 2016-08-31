@@ -1,4 +1,4 @@
-delete '/categories/:category_id/question/:question_id' do
+delete '/categories/:category_id/questions/:question_id' do
   @question = Question.find(params[:question_id])
   @question.destroy
   p "I destroyed"
@@ -12,6 +12,8 @@ get '/categories/:id' do
 end
 
 post '/categories/:id' do
+  p "!!!!!!!!!!!!!!!!!!!!!!!!"
+  p params
   @question = Question.create(title: params[:title], content: params[:content], user_id: session[:user_id], category_id: params[:id])
   redirect '/'
 end

@@ -2,7 +2,7 @@
 
 <h2>Fill out form below to submit answer.</h2>
 
-<form action="/questions/<%=@question.id%>/answers" method="post">
+<form action="/categories/<%=@category.id%>/questions/<%=@question.id%>/answers" method="post">
   Answer: <input type="text" name="content"><br>
   <input type="submit" value="Submit">
 </form>
