@@ -1,17 +1,10 @@
 get '/' do
+  @categories = Category.all
   erb :index
-end
-
-get '/users/index' do
-
 end
 
 get '/users/new' do
   erb :'users/new'
-end
-
-get '/users/:id' do
-
 end
 
 post '/users' do
