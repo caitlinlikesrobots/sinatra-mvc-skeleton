@@ -1,14 +1,12 @@
-delete '/categories/:category_id/question/:question_id' do
+delete '/categories/:category_id/questions/:question_id' do
   @question = Question.find(params[:question_id])
   @question.destroy
-  p "I destroyed"
-
   redirect "/categories/#{params[:category_id]}"
 end
 
 get '/categories/:id' do
   @category = Category.find(params[:id])
-  erb :'categories/questions'
+  erb :'categories/show'
 end
 
 post '/categories/:id' do

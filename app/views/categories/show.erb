@@ -1,7 +1,7 @@
 <h1><%= @category.name %></h1>
 <% @category.questions.each do |question| %>
-<a href= "/categories/<%= @category.id%>/question/<%= question.id %>"><%= question.title %></a>
-<form method='post' action="/categories/<%=@category.id%>/question/<%=question.id%>">
+<a href= "/categories/<%= @category.id%>/questions/<%= question.id %>"><%= question.title %></a>
+<form method='post' action="/categories/<%=@category.id%>/questions/<%=question.id%>">
   <input type='hidden' name='_method' value='delete'>
   <input type='submit' value='delete'>
 </form>
@@ -9,10 +9,11 @@
 <% if session[:user_id] %>
 <form action="/categories/<%= @category.id %>" method="post" id="questform">
   Question: <input type="text" name="title">
-  <input type="submit">
-</form>
-<br>
-<textarea rows="4" cols="50" name="content" form="usrform">
+  <input type="submit"><br>
+  <textarea rows="4" cols="50" name="content">
 </textarea>
+</form>
+
+
 <% end %>
 
