@@ -18,12 +18,17 @@ end
 
 post'/login' do
   user = User.find_by(email: params[:email])
-  if user.authenticate(params[:password])
-    session[:user_id] = user.id
-    redirect '/'
-  else
-    @errors = @user.errors.full_messages
+  if user == nil
+    @errors = ['Email Address or Password Not Found']
     erb :'/users/login'
+  else
+    if user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect '/'
+    else
+      @errors = ['Email Address or Password Not Found']
+      erb :'/users/login'
+    end
   end
 end
 
