@@ -1,15 +1,15 @@
+<ul class="errors">
 <% if @errors %>
   <% @errors.each do |error| %>
-    <%= error %><br>
+    <li><%= error %></li>
   <% end %>
 <% end %>
-
-<form action="/users" method="post">
-  <label> Username </label>
-  <input type="text" name="user[username]" /><br>
-  <label> Email </label>
-  <input type="email" name="user[email]" /><br>
-  <label> Password </label>
-  <input type="password" name="user[password]" /><br>
-  <input type="submit" value="Sign Up!" />
+</ul>
+<h2 class="register-header"> Register! </h2>
+<form action="/users" method="post" class="register">
+  <input type="text" name="user[username]" placeholder="
+Username" /><br>
+  <input type="email" name="user[email]" placeholder="Email" /><br>
+  <input type="password" name="user[password]" placeholder="Password" /><br>
+  <button type="submit" value="Sign Up!" class="button">Sign Up!</>
 </form>
