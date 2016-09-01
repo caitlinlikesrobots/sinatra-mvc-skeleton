@@ -1,0 +1,12 @@
+<h2><%= @user.username %></h2><br>
+
+<h4> Questions you have asked </h4>
+<%@user.questions.each do |question|%>
+	<a href="/categories/<%=question.category_id%>/questions/<%=question.id%>"><%=question.title%></a><br>
+	<span><%=question.content%></span><br>
+<% end %>
+<br><h4> Questions you have answered </h4>
+<% @user.answers.each do |answer| %>
+	<a href="/categories/<%=Question.find(answer.question_id).category_id%>/questions/<%=answer.question_id%>"><%= Question.find(answer.question_id).title%></a><br>
+	<%= answer.content %>
+<% end %>

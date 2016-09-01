@@ -66,6 +66,12 @@ code {
     overflow: auto;
 }
 
+.errors {
+    color: #e60000;
+    font-family: Geneva;
+    list-style-type: none;
+    text-align: center;
+}
 .head-links {
     background-color: #1ab2ff;
     box-shadow: 0 10px 0 #404040;
@@ -79,6 +85,70 @@ code {
 
 .head-links a:visited{
     color: #ffffff;
+}
+
+.register-header{
+    text-shadow: 2px 2px #404040;
+    letter-spacing: 1px;
+    font-family: Geneva;
+    font-style: normal;
+    font-weight: bold;
+    z-index: 10;
+    position: fixed;
+    top: 175px;
+    left: 560px;
+    width: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.register{
+    position: fixed;
+    top: 200px;
+    left: 470px;
+    width: 350px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    border: 1px outset #00008b;
+    border-radius: 10px;
+    text-align: center;
+    background: #f2f2f2;
+    -moz-box-shadow:    inset 0 0 15px #000000;
+    -webkit-box-shadow: inset 0 0 15px #000000;
+    box-shadow:         inset 0 0 15px #000000;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+input[type=text] {
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+input[type=email] {
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+input[type=password] {
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
 }
 
 html {
