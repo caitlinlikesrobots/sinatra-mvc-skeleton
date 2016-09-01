@@ -1,8 +1,14 @@
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <%= error %><br>
+  <% end %>
+<% end %>
+
 <h1><%=@question.title %> - <%=@question.user.username %> </h1>
 
 <h2>Fill out form below to submit answer.</h2>
 
 <form action="/categories/<%=@category.id%>/questions/<%=@question.id%>/answers" method="post">
-  Answer: <input type="text" name="content"><br>
+  Answer: <textarea rows="4" cols="50" name="content"></textarea><br>
   <input type="submit" value="Submit">
 </form>
