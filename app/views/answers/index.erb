@@ -4,10 +4,18 @@
 <h3> Answers </h3>
 <% @answers.each do |answer|%>
 
-<ul>
+<ul id="<%=answer.id%>">
 <li><%= answer.content %> </li>
 <%= User.find(answer.user_id).username %>
+<form class="voteform" action="/categories/<%=@category.id%>/questions/<%=@question.id%>" method="post" />
+  <p class="vote-count"><%= answer.total_votes %></p>
+  <button class="vote-button" name="submit">
+    <input type='hidden' name='answer' value="<%=answer.id%>"/>
+    <span class="icon"></span> <span class="text">Vote Up!</span>
+  </button>
+</form>
 </ul>
 
 <% end%>
-<a href="/categories/<%=@category.id%>/questions/<%=@question.id%>/answers/new"> Submit an answer </a>
+<a href="/categories/<%=@category.id%>/questions/<%=@question.id%>/answers/new"> Submit an Answer </a>
+
